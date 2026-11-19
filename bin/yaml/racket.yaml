@@ -80,10 +80,14 @@ compilers:
         script: *racket_script_bc_disassemble
       - name: "6.5"
         fetch: *racket_linux
-        script: *racket_script_bc_disassemble
+        script: &racket_script_bc_no_ssl |
+          sh racket-{{name}}.sh --in-place --dest ./racket/racket-{{name}}
+          mkdir -p ./racket/racket-{{name}}/collects/disassemble
+          curl -fsSL https://github.com/samth/disassemble/archive/00d2980ae1f2bdb09c74c1a069c3812b1e9ad0e5.tar.gz | tar -xz --strip-components=1 -C ./racket/racket-{{name}}/collects/disassemble
       - name: "6.4"
         fetch: &racket_precise
           - https://download.racket-lang.org/installers/6.4/racket-6.4-x86_64-linux-ubuntu-precise.sh racket-{{name}}.sh
+        script: *racket_script_bc_no_ssl
       - "6.3"
       - "6.2.1"
       - "6.2"
