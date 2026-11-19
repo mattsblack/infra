@@ -130,48 +130,48 @@ compilers:
       - name: "5.3.4"
         fetch: &racket_squeeze
           - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-bin-x86_64-linux-debian-squeeze.sh racket-{{name}}.sh
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.3.3"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.3.2"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.3.1"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.3"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.2.1"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.2"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.1.3"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.1.2"
         fetch: *racket_squeeze
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.1.1"
         fetch: &racket_f14
           - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-bin-x86_64-linux-f14.sh racket-{{name}}.sh
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.1"
         fetch: *racket_f14
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.0.2"
         fetch: &racket_f7
           - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-bin-x86_64-linux-f7.sh
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.0.1"
         fetch: *racket_f7
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.0"
         fetch: *racket_f7
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
     nightly:
       if: nightly
       install_always: true
