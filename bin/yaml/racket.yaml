@@ -41,8 +41,10 @@ compilers:
       - "7.6"
       - "7.5"
       - "7.4"
-      - "7.3"
-      - "7.2"
+      - name: "7.3"
+        fetch: &racket_linux
+          - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-x86_64-linux.sh racket-{{name}}.sh
+      - { name: "7.2", fetch: *racket_linux }
       - "7.1"
       - "7.0"
       - "6.12"
