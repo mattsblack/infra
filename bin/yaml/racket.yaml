@@ -72,7 +72,6 @@ compilers:
       - name: "6.4"
         fetch: &racket_precise
           - https://download.racket-lang.org/installers/6.4/racket-6.4-x86_64-linux-ubuntu-precise.sh racket-{{name}}.sh
-        script: *racket_script_no_recspecs
       - "6.3"
       - "6.2.1"
       - "6.2"
