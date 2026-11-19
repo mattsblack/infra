@@ -88,13 +88,27 @@ compilers:
         fetch: &racket_precise
           - https://download.racket-lang.org/installers/6.4/racket-6.4-x86_64-linux-ubuntu-precise.sh racket-{{name}}.sh
         script: *racket_script_bc_no_ssl
-      - "6.3"
-      - "6.2.1"
-      - "6.2"
-      - "6.1.1"
-      - "6.1"
-      - "6.0.1"
-      - "6.0"
+      - name: "6.3"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
+      - name: "6.2.1"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
+      - name: "6.2"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
+      - name: "6.1.1"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
+      - name: "6.1"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
+      - name: "6.0.1"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
+      - name: "6.0"
+        fetch: *racket_precise
+        script: *racket_script_bc_no_ssl
       - "5.93"
       - "5.92"
       - "5.3.6"
