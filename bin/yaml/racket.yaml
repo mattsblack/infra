@@ -123,10 +123,10 @@ compilers:
       - name: "5.3.6"
         fetch: &racket_precise_bin
           - https://download.racket-lang.org/installers/{{name}}/racket/racket-{{name}}-bin-x86_64-linux-ubuntu-precise.sh racket-{{name}}.sh
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.3.5"
         fetch: *racket_precise_bin
-        script: *racket_script_bc_no_ssl
+        script: *racket_script_bc_interactive
       - name: "5.3.4"
         fetch: &racket_squeeze
           - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-bin-x86_64-linux-debian-squeeze.sh racket-{{name}}.sh
