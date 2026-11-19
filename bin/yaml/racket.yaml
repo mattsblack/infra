@@ -51,17 +51,37 @@ compilers:
       - name: "7.2"
         fetch: *racket_linux
         script: *racket_script_no_recspecs
-      - "7.1"
-      - "7.0"
+      - name: "7.1"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "7.0"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
       - "6.12"
-      - "6.11"
-      - "6.10.1"
-      - "6.10"
-      - "6.9"
-      - "6.8"
-      - "6.7"
-      - "6.6"
-      - "6.5"
+      - name: "6.11"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.10.1"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.10"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.9"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.8"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.7"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.6"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
+      - name: "6.5"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
       - "6.4"
       - "6.3"
       - "6.2.1"
