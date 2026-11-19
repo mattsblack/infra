@@ -57,7 +57,9 @@ compilers:
       - name: "7.0"
         fetch: *racket_linux
         script: *racket_script_no_recspecs
-      - "6.12"
+      - name: "6.12"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
       - name: "6.11"
         fetch: *racket_linux
         script: *racket_script_no_recspecs
