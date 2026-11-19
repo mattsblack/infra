@@ -62,18 +62,25 @@ compilers:
         script: *racket_script_bc_disassemble
       - name: "6.10.1"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.10"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.9"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.8"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.7"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.6"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.5"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.4"
         fetch: &racket_precise
           - https://download.racket-lang.org/installers/6.4/racket-6.4-x86_64-linux-ubuntu-precise.sh racket-{{name}}.sh
