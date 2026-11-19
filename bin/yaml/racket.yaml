@@ -44,7 +44,13 @@ compilers:
       - name: "7.3"
         fetch: &racket_linux
           - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-x86_64-linux.sh racket-{{name}}.sh
-      - { name: "7.2", fetch: *racket_linux }
+        script: &racket_script_no_recspecs |
+          sh racket-{{name}}.sh --in-place --dest ./racket/racket-{{name}}
+          racket/racket-{{name}}/bin/raco pkg install -i --deps force --no-setup disassemble
+          racket/racket-{{name}}/bin/raco setup --no-docs disassemble machine-code
+      - name: "7.2"
+        fetch: *racket_linux
+        script: *racket_script_no_recspecs
       - "7.1"
       - "7.0"
       - "6.12"
