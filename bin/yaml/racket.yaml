@@ -53,8 +53,13 @@ compilers:
         fetch: *racket_linux
       - name: "6.12"
         fetch: *racket_linux
+        script: &racket_script_bc_disassemble |
+          sh racket-{{name}}.sh --in-place --dest ./racket/racket-{{name}}
+          racket/racket-{{name}}/bin/raco pkg install -i --deps force --no-setup github://github.com/samth/disassemble/00d2980ae1f2bdb09c74c1a069c3812b1e9ad0e5
+          racket/racket-{{name}}/bin/raco setup --no-docs disassemble machine-code
       - name: "6.11"
         fetch: *racket_linux
+        script: *racket_script_bc_disassemble
       - name: "6.10.1"
         fetch: *racket_linux
       - name: "6.10"
