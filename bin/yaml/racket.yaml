@@ -7,7 +7,8 @@ compilers:
       - https://download.racket-lang.org/releases/{{name}}/installers/racket-{{name}}-x86_64-linux-cs.sh racket-{{name}}.sh
     script: |
       sh racket-{{name}}.sh --in-place --dest ./racket/racket-{{name}}
-      racket/racket-{{name}}/bin/raco pkg install -i --auto disassemble
+      racket/racket-{{name}}/bin/raco pkg install -i --deps force --no-setup disassemble
+      racket/racket-{{name}}/bin/raco setup --no-docs disassemble machine-code
     targets:
       - "9.3"
       - "9.2"
@@ -44,46 +45,30 @@ compilers:
       - name: "7.3"
         fetch: &racket_linux
           - https://download.racket-lang.org/installers/{{name}}/racket-{{name}}-x86_64-linux.sh racket-{{name}}.sh
-        script: &racket_script_no_recspecs |
-          sh racket-{{name}}.sh --in-place --dest ./racket/racket-{{name}}
-          racket/racket-{{name}}/bin/raco pkg install -i --deps force --no-setup disassemble
-          racket/racket-{{name}}/bin/raco setup --no-docs disassemble machine-code
       - name: "7.2"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "7.1"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "7.0"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.12"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.11"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.10.1"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.10"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.9"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.8"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.7"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.6"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.5"
         fetch: *racket_linux
-        script: *racket_script_no_recspecs
       - name: "6.4"
         fetch: &racket_precise
           - https://download.racket-lang.org/installers/6.4/racket-6.4-x86_64-linux-ubuntu-precise.sh racket-{{name}}.sh
