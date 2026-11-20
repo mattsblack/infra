@@ -18,6 +18,10 @@ compilers:
       - rm -rf std/.git
     # sha256 is the x86_64-linux tarball's entry in each release's SHA256SUMS
     targets:
+      - name: 6.5.0
+        sha256: d08913e34e379d4a0e34f96d7e62d797b87a0e64de3759a34ea6d1812585f2e9
+      - name: 6.6.0
+        sha256: 053d8718da2da12f5a50f690b6e57e97e11c0b3d6577ae6df387ca0b728ddb7a
       - name: 6.7.0
         sha256: f0f4fd2f1a0fc05f9a841b38c09c73f61940afb4c55d15d6eb051d6eb5a41326
         std: 9.4.1
@@ -26,3 +30,13 @@ compilers:
         sha256: 3cffe0cadfcb23776bfc4a9a661ef06a5d3b1181b051dc2beee5bba57e931eed
         std: 9.4.1
         std_commit: 69a02f2a183a12297843eef581e30252f8e5c215
+      - name: 6.7.3
+        sha256: 1cf202b3b1ef066f48a510345d170cc4838c468031c4fe9d5540fa9cc162468a
+      - name: 6.8.0
+        sha256: fa827db698fe604b1e96d88f41cd3fccfdc7822741edf27d65f86752dfdaa591
+      - name: 6.9.0
+        sha256: 69160be320ce21c804a3a5625dc5b127c891207d5f740ad9913d02388d1ff342
+      - name: 6.10.0
+        sha256: b320359ffefdc87cbec7dc05c19499204e0d9a6724faf2185b2b9cb29e25bc86
+      - name: 6.10.1
+        sha256: 136095ea3431f6678cb611ee016847908fb1449a865c7ed7be99affc0c56d96e
